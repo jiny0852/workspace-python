@@ -18,8 +18,6 @@ for num in list:
     if ((num)%3) == 0:
         result += num
         count += 1
-    else :
-        break
 
 print(f"주어진 배열에서 3의 배수의 갯수=>{count}")
 print(f"주어진 배열에서 3의 배수의 합=>{result}")
