@@ -9,6 +9,7 @@ while start_system :
     print("*"*50)
 
     status = True
+    person_list = get_list()
 
     while status :
 
@@ -19,19 +20,28 @@ while start_system :
             match menu :
                  
                 case 1 :
-                    i = 0
-                    person_list = get_list()
+                    print("<1.리스트>")
+                    read_list (person_list)
 
-                    for person in person_list :
-                        print(person_list[i])
-                        i += 1
+                case 2: #등록 
+                    print("<2.등록>")
+                    person = []
+                    person[0] = input("이름> ")
+                    person[1] = input("휴대전화> ")
+                    person[2] = input("회사전화> ")
+                    insert_list (person_list, person)
 
-                case 2: #등록
-                    pass
                 case 3: #삭제
-                    pass
+                    print("<3.삭제>")
+                    delete_list (person_list)
+
                 case 4: #검색
                     pass
+
+                    # index 찾기
+
+                    # print(b.index(1000))
+
                 case 5: #종료
                     print("*"*50)
                     print("감사합니다")
